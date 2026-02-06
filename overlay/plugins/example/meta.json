@@ -1,0 +1,7 @@
+{
+    "id": "example",
+    "name": "Example Plugin",
+    "description": "This is an example plugin for the Smash Soda overlay (it doesn't actually do anything!)",
+    "author": "Trybuchet",
+    "version": "1.0.0"
+}

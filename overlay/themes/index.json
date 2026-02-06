@@ -1,0 +1,16 @@
+{
+    "schemaVersion": 1,
+    "updatedAt": "2026-02-01T12:00:00Z",
+    "items": [
+        {
+            "id": "cyber",
+            "name": "Cyber",
+            "description": "A dark green theme with sliding panels.",
+            "author": "Trybuchet",
+            "version": "1.0.0",
+            "files": [
+                "cyber.css"
+            ]
+        }
+    ]
+}

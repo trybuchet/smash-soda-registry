@@ -1,0 +1,316 @@
+/*
+Themes should try to follow the following color scheme:
+
+The primary color is the background color, 
+the secondary color is the text color, 
+the tertiary color is the accent color, 
+and the quaternary color is a secondary accent color. 
+
+The primary and secondary colors should have good contrast, 
+and the tertiary and quaternary colors should be used 
+sparingly for emphasis.
+
+Of course, this is just my advice...go nuts. :D
+
+- Mickey
+*/
+
+/*
+You can import fonts from Google Fonts here.
+https://fonts.google.com/
+*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/*
+Global styles for the overlay
+*/
+:root {
+  --color-primary: #232323;
+  --color-secondary: #ffffff;
+  --color-tertiary: #81fc7d;
+  --color-quaternary: #b8f5d4;
+
+  --font-primary: 'DM Sans', sans-serif;
+}
+
+/*
+This will set the scrollbar color of all scrollable elements
+*/
+* {
+  scrollbar-color: var(--color-tertiary) var(--color-primary);
+}
+
+/*
+The "app" is the entire overlay, and should be 
+styled to fit the screen, and apply any global styles.
+*/
+body {
+    padding: 0;
+}
+
+#app {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+/*
+An overlay feature has a .widget container, that can be positioned
+in one of the corners of the screen.
+*/
+.widget {
+  position: absolute;
+  box-sizing: border-box;
+}
+.widget.top { 
+    top: 0; 
+    border-top: 0 !important; 
+}
+.widget.right { 
+    right: 0; 
+    border-right: 0 !important; 
+}
+.widget.bottom { 
+    bottom: 0; 
+    border-bottom: 0 !important; 
+}
+.widget.left { 
+    left: 0; 
+    border-left: 0 !important; 
+}
+.widget.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*
+A "panel" is a container element.
+*/
+.panel {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 5px;
+}
+
+/*
+A guest's username.
+*/
+.guest {
+  color: var(--color-tertiary);
+  font-weight: bold;
+}
+
+/*
+Small text.
+*/
+.small {
+  font-size: 0.8em;
+}
+
+/*
+Disabled text or secondary information.
+*/
+.muted {
+  color: var(--color-quaternary);
+}
+
+/*
+Spacing for rows and columns.
+*/
+.row, .col {
+  gap: 10px;
+}
+
+/*
+The text chat input.
+*/
+.chat-input {
+  font-family: var(--font-primary);
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border: 1px solid transparent;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.chat-input:focus {
+    border-right: 4px solid var(--color-tertiary);
+}
+
+.top .chat-input:focus {
+  border-bottom: 2px solid var(--color-tertiary);
+}
+
+.right .chat-input:focus {
+  border-right: none;
+  border-left: 4px solid var(--color-tertiary);
+}
+
+.top .chat-input:focus {
+    border-top: none;
+}
+
+.right .chat-input:focus {
+    border-right: none;
+}
+
+.bottom .chat-input:focus {
+    border-bottom: none;
+}
+
+.left .chat-input:focus {
+    border-left: none;
+}
+
+/*
+The chat overlay widget.
+*/
+#widget-chat {
+  width: 400px;
+  gap: 0;
+}
+
+/*
+The scrollable chat history panel.
+*/
+.message-history {
+    height: 100px;
+    overflow-y: auto;
+    border-right: solid 4px var(--color-tertiary);
+}
+
+/*
+A chat message.
+*/
+.message {
+  font-size: 14px;
+}
+
+/*
+A guest's name in a chat message.
+*/
+.message-guest {
+  margin-right: 10px;
+}
+
+/*
+A chat message's body text.
+*/
+.message-body {
+  font-size: 14px;
+}
+
+/*
+The chat bubbles that appear when a message is
+sent or received (when the overlay is not focused).
+*/
+.bubbles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.message-bubble {
+  font-size: 14px;
+  border-right: solid 4px var(--color-tertiary);
+  padding-right: 10px;
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
+/*
+Here you can customize the animation for when bubbles
+enter and leave the screen.
+*/
+.message-bubble.enter {
+  animation: bubble-enter 0.2s forwards;
+}
+
+.message-bubble.leave {
+  animation: bubble-leave 0.2s forwards;
+}
+
+@keyframes bubble-enter {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes bubble-leave {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+/*
+The gamepad overlay widget.
+*/
+#widget-pads {
+  padding: 12px 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+#widget-pads.left {
+  border-right: 4px solid var(--color-tertiary);
+}
+
+#widget-pads.right {
+  border-left: 4px solid var(--color-tertiary);
+}
+
+#widget-pads.bottom.center {
+    border-top: 4px solid var(--color-tertiary);
+}
+
+#widget-pads.top.center {
+    border-bottom: 4px solid var(--color-tertiary);
+}
+
+/*
+Gamepad icon and owner container.
+*/
+.pad-container {
+  text-align: center;
+}
+
+/*
+Gamepad icons.  
+*/
+.gamepad {
+  fill: var(--color-secondary);
+}
+
+.gamepad-btn-pressed {
+  fill: var(--color-tertiary);
+}
+
+/*
+The guest list overlay widget.
+*/
+#widget-guests {
+  width: 250px;
+  padding: 5px 10px;
+  padding: 5px 10px;
+}
+
+#widget-guests.left {
+  border-right: 4px solid var(--color-tertiary);
+}
+
+#widget-guests.right {
+  border-left: 4px solid var(--color-tertiary);
+}

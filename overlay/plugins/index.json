@@ -1,0 +1,20 @@
+{
+    "schemaVersion": 1,
+    "updatedAt": "2026-02-01T12:00:00Z",
+    "items": [
+        {
+            "id": "example",
+            "name": "Example Plugin",
+            "description": "This is an example plugin for the Smash Soda overlay (it doesn't actually do anything!)",
+            "author": "Trybuchet",
+            "version": "1.0.0",
+            "files": [
+                "config.json",
+                "example.html",
+                "example.css",
+                "example.js",
+                "meta.json"
+            ]
+        }
+    ]
+}

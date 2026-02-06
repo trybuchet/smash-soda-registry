@@ -1,0 +1,56 @@
+{
+    "position": {
+        "type": "position",
+        "x": 0,
+        "y": 0,
+        "w": 200,
+        "h": 150,
+        "autoWidth": true,
+        "autoHeight": true,
+        "fullWidth": true,
+        "fullHeight": true,
+        "position": "top-left"
+    },
+    "name": {
+        "type": "text",
+        "label": "Name",
+        "value": "Example Plugin",
+        "help": "Enter your nickname"
+    },
+    "money": {
+        "type": "range",
+        "label": "Money",
+        "min": 0,
+        "max": 10000,
+        "value": 500,
+        "help": "How much money do you have?"
+    },
+    "pet": {
+        "type": "select",
+        "label": "Pet",
+        "options": [
+            {
+                "label": "Dog",
+                "value": "dog"
+            },
+            {
+                "label": "Cat",
+                "value": "cat"
+            }
+        ],
+        "value": "dog",
+        "help": "Select your pet"
+    },
+    "toggle": {
+        "type": "toggle",
+        "label": "Toggle",
+        "value": false,
+        "help": "Toggle your toggle"
+    },
+    "button": {
+        "type": "button",
+        "label": "DO NOT PRESS",
+        "action": "doThing",
+        "help": "...or do, it's up to you"
+    }
+}
