@@ -1,7 +1,7 @@
 {
   "version": "7.0.0",
   "notes": "Test",
-  "overlay": false,
+  "overlay": "",
   "cops": [
   ],
   "banned": [
