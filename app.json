@@ -1,6 +1,6 @@
 {
   "version": "7.0.2",
-  "notes": "* Fixed audio issues \n* Fixed some UI issues \n* Fixed overlay scaling \n* Added overlay webcam widget",
+  "notes": "* Fixed audio issues \n* Restored room details and stream URL options * Fixed some UI issues \n* Fixed overlay scaling \n* Added overlay webcam widget",
   "overlay": "1.0.2",
   "cops": [
   ],
