@@ -1,7 +1,7 @@
 {
-  "version": "7.0.1",
-  "notes": "* A big thanks to Luiz Henrique for fixing the issue with the latest drivers for Nvidia RTX cards. \n* Fixed issues with Bluetooth audio devices \n* Hopefully fixed issues when using high polling mice \n* Fixed chat clear button \n* Fixed DPI scaling \n* Fixed country selector \n* Restored custom artwork dropdown \n* Fixed various UI issues \n* Chat bubbles on overlay are now truncated \n* Fixed overlay zooming \n* Added theme download button to the overlay menu",
-  "overlay": "1.0.1",
+  "version": "7.0.2",
+  "notes": "* Fixed audio issues \n* Fixed some UI issues \n* Fixed overlay scaling \n* Added overlay webcam widget",
+  "overlay": "1.0.2",
   "cops": [
   ],
   "banned": [
