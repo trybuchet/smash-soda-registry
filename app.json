@@ -1,6 +1,6 @@
 {
-  "version": "7.0.3",
-  "notes": "* Luiz Henrique has implemented Windows Graphic Capture as an alternative to DXGI, which in general is more reliable. He has also implemented a Lanczos-2 shader, which will greatly improve detail clarity when output resolution does not match the host's native resolution. You'll find the new settings in the Video widget. \n* Fixed some issues when minimizing and maximizing Smash Soda.",
+  "version": "7.0.4",
+  "notes": "* Luiz Henrique has implemented Windows Graphic Capture as an alternative to DXGI, which in general is more reliable. He has also implemented a Lanczos-2 shader, which will greatly improve detail clarity when output resolution does not match the host's native resolution. You'll find the new settings in the Video widget. \n* Fixed some issues when minimizing and maximizing Smash Soda. \n* Fixed gamepad keyboard mapping",
   "overlay": "1.0.2",
   "cops": [
   ],
